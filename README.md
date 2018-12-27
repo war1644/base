@@ -1,8 +1,7 @@
 #基于alpine linux 日常开发环境 docker 镜像合集
 * base - 由于GFW原因，你需要cn化的alpine linux基础镜像
 * nginx
-* php5
-* php7
+* php
 * mysql
 * mysql-slave
 * redis

@@ -7,7 +7,7 @@ ENV TIMEZONE Asia/Shanghai
 # 一些工作目录准备
 RUN mkdir -p /var/www/html && \
     mkdir -p /var/lib/nginx && \
-    mkdir -p /my/web && \
+    mkdir -p /my/project && \
     # 修改镜像源为国内ustc.edu.cn(中科大)/aliyun.com(阿里云)
     # main官方仓库，community社区仓库
     echo http://mirrors.aliyun.com/alpine/edge/main > /etc/apk/repositories && \

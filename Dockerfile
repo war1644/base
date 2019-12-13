@@ -10,7 +10,7 @@ RUN mkdir -p /var/www/html && \
     mkdir -p /my/project && \
     # 修改镜像源为国内ustc.edu.cn(中科大)/aliyun.com(阿里云)
     # main官方仓库，community社区仓库
-    sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+    sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
     #echo https://mirrors.ustc.edu.cn/alpine/edge/main > /etc/apk/repositories && \
     #echo https://mirrors.ustc.edu.cn/alpine/edge/community >> /etc/apk/repositories && \
     # 更新索引，系统和修改时区以及一些扩展 busybox-extras libc6-compat openssh git shadow

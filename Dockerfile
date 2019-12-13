@@ -2,19 +2,16 @@
 FROM alpine:3.10
 LABEL author=ahmerry@qq.com
 
+ENV OS_VER 3.10
 ENV TIMEZONE Asia/Shanghai
 
 # 一些工作目录准备
-RUN mkdir -p /var/www/html && \
-    mkdir -p /var/lib/nginx && \
+RUN mkdir -p /var/lib/nginx && \
     mkdir -p /my/project && \
-    # 修改镜像源为国内ustc.edu.cn(中科大)/aliyun.com(阿里云)
-    # main官方仓库，community社区仓库
+    # 修改镜像源为国内 ustc.edu.cn(中科大)/aliyun.com(阿里云)
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
-    #echo https://mirrors.ustc.edu.cn/alpine/edge/main > /etc/apk/repositories && \
-    #echo https://mirrors.ustc.edu.cn/alpine/edge/community >> /etc/apk/repositories && \
-    # 更新索引，系统和修改时区以及一些扩展 busybox-extras libc6-compat openssh git shadow
-    apk update && apk upgrade -a && apk add --no-cache tzdata curl wget bash vim && \
+    # 更新索引，系统和修改时区以及一些扩展
+    apk update && apk upgrade && apk add --no-cache tzdata bash && \
     # -X获取指定仓库的包
     #apk add --no-cache -X http://mirrors.aliyun.com/alpine/edge/community neofetch && \
     #apk add --no-cache -X http://mirrors.aliyun.com/alpine/edge/testing filebeat && \

@@ -19,8 +19,8 @@ RUN mkdir -p /my/project && \
     echo "source /etc/profile " >> ~/.bashrc && \
     # 配置时区
     cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
-    echo "${TIMEZONE}" > /etc/timezone
+    echo "${TIMEZONE}" > /etc/timezone && \
     # 创建www用户组 alpine中 -D:不创建密码
-    #adduser -D www www && \
+    adduser -D www www
 
 CMD ["bash"]

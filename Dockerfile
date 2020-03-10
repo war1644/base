@@ -8,7 +8,7 @@ ENV TIMEZONE Asia/Shanghai
 # 一些工作目录准备
 RUN mkdir -p /my/project && \
     # 修改镜像源为国内 ustc.edu.cn(中科大)/aliyun.com(阿里云)
-    sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+    sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
     # 更新索引，系统和修改时区以及一些扩展
     apk update && apk upgrade && apk add --no-cache tzdata bash && \
     # -X获取指定仓库的包

@@ -7,6 +7,6 @@
 * [redis镜像](https://github.com/war1644/redis) - redis
 * [gitlab镜像](https://github.com/war1644/gitlab) - gitlab很多公司需要自己的code仓库，开箱即用
 * [ELK镜像](https://github.com/war1644/log) - ELK分析处理监控服务器镜像，与nginx镜像搭配，开箱即用
-* [node.js镜像](https://github.com/war1644/node_app) - 预装gulp和cnpm
+* [base_node8镜像](https://github.com/war1644/base_node8) - 预装gulp和cnpm
 * [python3镜像](https://github.com/war1644/python3) - pyhton3
 * [golang镜像](https://github.com/war1644/golang) - golang
